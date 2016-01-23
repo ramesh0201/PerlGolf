@@ -1,0 +1,1 @@
+($a,$b,$c)=@ARGV;for$i(0..$a-1){for$j(0..$b-1){if($c){print"* ";$d[$i][$j]='*';$c--}else{$e=0;if($i){$e+=$d[$i-1][$j]eq'*'?1:0}if($j){$e+=$d[$i][$j-1]eq'*'?1:0;if($i){$e+=$d[$i-1][$j-1]eq'*'?1:0}}if($j<$b-1&&$i){$e+=$d[$i-1][$j+1]eq'*'?1:0}$d[$i][$j]=$e;print"$e "}}print$/}
